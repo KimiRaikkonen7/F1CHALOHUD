@@ -1,0 +1,384 @@
+//-------------------------------------------------------
+//
+// ConstrictoR Modding Team
+// Formula One 2018 Level 1 High Quality GEN file by CMT
+//
+// ------------------------------------------------------
+
+
+//----------------------------------------
+
+SearchPath=<VEHDIR>
+
+MASFile=CDB.MAS
+MASFile=CMAPS.MAS
+MASFile=HUD.MAS
+
+//----------------------------------------
+
+SearchPath=<TEAMDIR>
+
+MASFile=Team.mas
+
+//----------------------------------------
+
+Instance=SLOT<ID>
+{
+  Moveable=True
+<NOTSPIN>MeshFile=f1car.MTS Render=False CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(0.0)
+<SPIN>   MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+<LOW>    MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(1.00)
+<LOW>    MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(1.00) LODOut=(10.0)
+<LOW>    MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(225.0)
+<LOW>    MeshFile=vs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(10.0)
+<MED>    MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(3.00)
+<MED>    MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(3.0) LODOut=(12.0)
+<MED>    MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(12.0) LODOut=(260.0)
+<MED>    MeshFile=vs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(15.0)
+<HIGH>   MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(5.0)
+<HIGH>   MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(5.0) LODOut=(15.0)
+<HIGH>   MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(15.0) LODOut=(300.0)
+<HIGH>   MeshFile=vs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(30.0)
+<MAX>    MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(10.0)
+<MAX>    MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(20.0)
+<MAX>    MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(20.0) LODOut=(350.0)
+<MAX>    MeshFile=vs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(40.0)
+
+  Actor=VEHICLE
+
+<NOTSPIN><DASHHIGH>  Instance=COCKPIT
+<NOTSPIN><DASHHIGH>  {
+<NOTSPIN><DASHHIGH>    Moveable=True
+<NOTSPIN><DASHHIGH>    MeshFile=<1234>vq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(5.0)
+<NOTSPIN><DASHHIGH>  }
+
+  Instance=Speedometer
+  {
+    Moveable=True
+<LOW>    MeshFile=HUD.MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<MED>    MeshFile=HUD.MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<HIGH>   MeshFile=HUD.MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<MAX>    MeshFile=HUD.MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<LOW>    MeshFile=READOUT.MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<MED>    MeshFile=READOUT.MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<HIGH>   MeshFile=READOUT.MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<MAX>    MeshFile=READOUT.MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+  }
+
+ Instance=BRAKELIGHT
+  {
+    Moveable=True
+<LOW>    MeshFile=BRAKELIGHT[HUD].MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<MED>    MeshFile=BRAKELIGHT[HUD].MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<HIGH>   MeshFile=BRAKELIGHT[HUD].MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<MAX>    MeshFile=BRAKELIGHT[HUD].MTS CollTarget=True HATTarget=False LODIn=(0.0) LODOut=(1.0)
+  }
+
+  Instance=SUSPENSION
+  {
+    Moveable=True
+<SPIN>                  MeshFile=<56>susp.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(10.00)
+<NOTSPIN><DASHHIGH>     MeshFile=<56>susp.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.00)
+<NOTSPIN><DASHLOW>      MeshFile=lowsusp.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.00)
+  }
+
+  Instance=WHEEL
+  {
+    Moveable=True
+<SPIN>                  MeshFile=F1SLswa.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(10.00)
+<NOTSPIN><DASHHIGH>     MeshFile=F1SLswa.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.00)
+<NOTSPIN><DASHLOW>      MeshFile=lowwheel.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.00)
+  }
+
+  Instance=ARMS
+  {
+    Moveable=True
+<SPIN>       MeshFile=ADriverArms.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+<LOW>        MeshFile=ADriverArms.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(10.0)
+<MED>        MeshFile=ADriverArms.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(12.0)
+<HIGH>       MeshFile=ADriverArms.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(15.0)
+<MAX>        MeshFile=ADriverArms.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.0)
+    AnimFile=catsteer.ANM
+  }
+
+  Instance=BODY
+  {
+    Moveable=True
+<SPIN>       MeshFile=<56>Driver.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+<LOW>        MeshFile=<56>Driver.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(10.0)
+<MED>        MeshFile=<56>Driver.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(12.0)
+<HIGH>       MeshFile=<56>Driver.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(15.0)
+<MAX>        MeshFile=<56>Driver.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.0)
+  }
+
+  Instance=HELMET
+  {
+    Moveable=True
+<SPIN>      MeshFile=<1234>helmet.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.0)
+<LOW>       MeshFile=<1234>helmet.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(65.0)
+<MED>       MeshFile=<1234>helmet.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(1.0)
+<MED>       MeshFile=<1234>helmet.MTS CollTarget=False HATTarget=False LODIn=(1.0) LODOut=(85.0)
+<HIGH>      MeshFile=<1234>helmet.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(3.0)
+<HIGH>      MeshFile=<1234>helmet.MTS CollTarget=False HATTarget=False LODIn=(3.0) LODOut=(100.0)
+<MAX>       MeshFile=<1234>helmet.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(5.0)
+<MAX>       MeshFile=<1234>helmet.MTS CollTarget=False HATTarget=False LODIn=(5.0) LODOut=(120.0)
+  }
+
+  Instance=BACKFIRE
+  {
+    Moveable=True
+<NOTSPIN>   MeshFile=backfire.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.0)
+<LOW>       MeshFile=backfire.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(15.0)
+<MED>       MeshFile=backfire.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.0)
+<HIGH>      MeshFile=backfire.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(25.0)
+<MAX>       MeshFile=backfire.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(30.0)
+  }
+
+
+<SPIN>  Instance=SPINSHAD
+<SPIN>  {
+<SPIN>    Moveable=True
+<SPIN>      MeshFile=viewshad.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.0)
+<SPIN>  }
+
+  Instance=LFTIRE
+  {
+    Moveable=True
+<SPIN>    MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.00)
+<SPIN>    MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<LOW>     MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(1.5)
+<LOW>     MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(30.0)
+<LOW>     MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(1.5) LODOut=(10.0)
+<LOW>     MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(30.0)
+<LOW>     MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(190.0)
+<LOW>     MeshFile=tfls.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(10.00)
+<MED>     MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(3.0)
+<MED>     MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(40.0)
+<MED>     MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(3.0) LODOut=(12.0)
+<MED>     MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(40.0)
+<MED>     MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(12.0) LODOut=(210.0)
+<MED>     MeshFile=tfls.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(15.00)
+<HIGH>    MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(5.0)
+<HIGH>    MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(5.00) LODOut=(8.0)
+<HIGH>    MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(8.0) LODOut=(15.0)
+<HIGH>    MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(15.0) LODOut=(230.0)
+<HIGH>    MeshFile=tfls.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(30.00)
+<MAX>     MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(5.0)
+<MAX>     MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(5.00) LODOut=(10.0)
+<MAX>     MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(18.0)
+<MAX>     MeshFile=<567>RIMLF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRELF.MTS CollTarget=False HATTarget=False LODIn=(18.0) LODOut=(250.0)
+<MAX>     MeshFile=tfls.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(40.00)
+  }
+
+  Instance=RFTIRE
+  {
+    Moveable=True
+<SPIN>    MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.00)
+<SPIN>    MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<LOW>     MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(1.5)
+<LOW>     MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(30.0)
+<LOW>     MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(1.5) LODOut=(10.0)
+<LOW>     MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(30.0)
+<LOW>     MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(190.0)
+<LOW>     MeshFile=tfrs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(10.00)
+<MED>     MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(3.0)
+<MED>     MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(40.0)
+<MED>     MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(3.0) LODOut=(12.0)
+<MED>     MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(40.0)
+<MED>     MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(12.0) LODOut=(210.0)
+<MED>     MeshFile=tfrs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(15.00)
+<HIGH>    MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(5.0)
+<HIGH>    MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(5.00) LODOut=(8.0)
+<HIGH>    MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(8.0) LODOut=(15.0)
+<HIGH>    MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(15.0) LODOut=(230.0)
+<HIGH>    MeshFile=tfrs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(30.00)
+<MAX>     MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(5.0)
+<MAX>     MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(5.00) LODOut=(10.0)
+<MAX>     MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(18.0)
+<MAX>     MeshFile=<567>RIMRF.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRERF.MTS CollTarget=False HATTarget=False LODIn=(18.0) LODOut=(250.0)
+<MAX>     MeshFile=tfrs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(40.00)
+  }
+
+  Instance=LRTIRE
+  {
+    Moveable=True
+<SPIN>    MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.00)
+<SPIN>    MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<LOW>     MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(1.5)
+<LOW>     MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(30.0)
+<LOW>     MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(1.5) LODOut=(10.0)
+<LOW>     MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(30.0)
+<LOW>     MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(190.0)
+<LOW>     MeshFile=trls.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(10.00)
+<MED>     MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(3.0)
+<MED>     MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(40.0)
+<MED>     MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(3.0) LODOut=(12.0)
+<MED>     MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(40.0)
+<MED>     MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(12.0) LODOut=(210.0)
+<MED>     MeshFile=trls.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(15.00)
+<HIGH>    MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(5.0)
+<HIGH>    MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(5.00) LODOut=(8.0)
+<HIGH>    MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(8.0) LODOut=(15.0)
+<HIGH>    MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(15.0) LODOut=(230.0)
+<HIGH>    MeshFile=trls.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(30.00)
+<MAX>     MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(5.0)
+<MAX>     MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(5.00) LODOut=(10.0)
+<MAX>     MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(18.0)
+<MAX>     MeshFile=<567>RIMLR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRELR.MTS CollTarget=False HATTarget=False LODIn=(18.0) LODOut=(250.0)
+<MAX>     MeshFile=trls.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(40.00)
+  }
+
+  Instance=RRTIRE
+  {
+    Moveable=True
+<SPIN>    MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.00)
+<SPIN>    MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<LOW>     MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(1.5)
+<LOW>     MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(30.0)
+<LOW>     MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(1.5) LODOut=(10.0)
+<LOW>     MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(30.0)
+<LOW>     MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(190.0)
+<LOW>     MeshFile=trrs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(10.00)
+<MED>     MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(3.0)
+<MED>     MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(40.0)
+<MED>     MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(3.0) LODOut=(12.0)
+<MED>     MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(40.0)
+<MED>     MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(12.0) LODOut=(210.0)
+<MED>     MeshFile=trrs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(15.00)
+<HIGH>    MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(5.0)
+<HIGH>    MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(5.00) LODOut=(8.0)
+<HIGH>    MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(8.0) LODOut=(15.0)
+<HIGH>    MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(50.0)
+<HIGH>    MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(15.0) LODOut=(230.0)
+<HIGH>    MeshFile=trrs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(30.00)
+<MAX>     MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(0.00) LODOut=(5.0)
+<MAX>     MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(5.00) LODOut=(10.0)
+<MAX>     MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(18.0)
+<MAX>     MeshFile=<567>RIMRR.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(80.0)
+<MAX>     MeshFile=TIRERR.MTS CollTarget=False HATTarget=False LODIn=(18.0) LODOut=(250.0)
+<MAX>     MeshFile=trrs.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(40.00)
+  }
+
+    Instance=FWING
+  {
+    Moveable=True
+<SPIN>    MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(15.0)
+<LOW>     MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(5.0)
+<LOW>     MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False LODIn=(5.0) LODOut=(225.0)
+<LOW>     MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(10.0)
+<MED>     MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(10.0)
+<MED>     MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(260.0)
+<MED>     MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(15.0)
+<HIGH>    MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(15.0)
+<HIGH>    MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False LODIn=(15.0) LODOut=(300.0)
+<HIGH>    MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(30.0)
+<MAX>     MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.0)
+<MAX>     MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False LODIn=(20.0) LODOut=(350.0)
+<MAX>     MeshFile=<1234>fwa.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(40.0)
+  }
+
+  Instance=RWING
+  {
+    Moveable=True
+<SPIN>    MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(15.0)
+<LOW>     MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(5.0)
+<LOW>     MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False LODIn=(5.0) LODOut=(225.0)
+<LOW>     MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(10.0)
+<MED>     MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(10.0)
+<MED>     MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False LODIn=(10.0) LODOut=(260.0)
+<MED>     MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(15.0)
+<HIGH>    MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(15.0)
+<HIGH>    MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False LODIn=(15.0) LODOut=(300.0)
+<HIGH>    MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(30.0)
+<MAX>     MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(20.0)
+<MAX>     MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False LODIn=(20.0) LODOut=(350.0)
+<MAX>     MeshFile=<1234>rwq.MTS CollTarget=False HATTarget=False ShadowObject=True LODIn=(0.0) LODOut=(40.0)
+  }
+
+  Instance=RAINLIGHT
+  {
+    Moveable=True
+    MeshFile=<56>rlight.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(75.0)
+  }
+
+  Instance=DEBRIS0
+  {
+    Moveable=True
+    MeshFile=shard01.MTS Render=False CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+  }
+
+  Instance=DEBRIS1
+  {
+    Moveable=True
+    MeshFile=shard02.MTS Render=False CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+  }
+
+  Instance=DEBRIS2
+  {
+    Moveable=True
+    MeshFile=shard03.MTS Render=False CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+  }
+
+  Instance=DEBRIS3
+  {
+    Moveable=True
+    MeshFile=shard04.MTS Render=False CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+  }
+
+  Instance=DEBRIS4
+  {
+    Moveable=True
+    MeshFile=shard05.MTS Render=False CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+  }
+
+  Instance=DEBRIS5
+  {
+    Moveable=True
+    MeshFile=shard06.MTS Render=False CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+  }
+
+  Instance=DEBRIS6
+  {
+    Moveable=True
+    MeshFile=shard07.MTS Render=False CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+  }
+
+  Instance=DEBRIS7
+  {
+    Moveable=True
+    MeshFile=shard08.MTS Render=False CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(100.0)
+  }
+}
+
+Instance=LCDSCREEN 
+  {
+    Moveable=True
+<LOW>    MeshFile=LCD.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(1.2)
+<MED>    MeshFile=LCD.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(1.2)
+<HIGH>   MeshFile=LCD.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(1.2)
+<MAX>    MeshFile=LCD.MTS CollTarget=False HATTarget=False LODIn=(0.0) LODOut=(1.2)
+  }
+
+
